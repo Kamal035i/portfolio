@@ -1,0 +1,931 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #9500a8;
+    color: #fff;
+    text-align: right;
+    padding: 10px;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lastica', cursive;
+    font-size: 36px;
+    display: inline;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: purple;
+    z-index: -1;
+}
+
+main {
+    position: relative;
+}
+
+section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+nav {
+    background: linear-gradient(to bottom, #800080, #4B0082); /* Purple gradient background */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px; /* Adjust the spacing as needed */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Add this to your existing CSS */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-container video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Add this to your existing CSS */
+
+.profile-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Add this to your existing CSS */
+
+.profile-glow {
+    border: 5px solid transparent;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 60px rgba(128, 0, 128, 1); /* Increased alpha and size for a brighter and bigger purple glow */
+
+    transition: box-shadow 0.3s, transform 0.3s; /* Add transition for smooth color and size change */
+}
+
+.profile-glow:hover {
+    box-shadow: 0 0 80px rgba(0, 128, 0, 1); /* Change to a bigger and brighter green glow when hovered */
+    transform: scale(1.3); /* Enlarge the profile picture by 30% */
+}
+
+
+.profile-glow img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+/* Add this to your existing CSS */
+
+.project-card {
+    display: inline-block;
+    margin: 5px; /* Reduced margin for a 5px gap */
+}
+
+.card {
+    width: 190px;
+    height: 254px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card2 {
+    width: 190px;
+    height: 254px;
+    background-color: #1a1a1a;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card2 p {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+.card-blue {
+    background-image: linear-gradient(163deg, #0099ff 0%, #0044ff 100%); /* Blue gradient background */
+}
+
+.card-green {
+    background-image: linear-gradient(163deg, #00ff44 0%, #00aaff 100%); /* Green gradient background */
+}
+/* Add this to your existing CSS */
+
+.card-content {
+    text-align: center;
+    padding: 20px;
+}
+
+h3 {
+    font-size: 16px; /* Adjust the font size for the title */
+    margin: 0;
+    color: red; /* Set the text color to red */
+}
+
+p {
+    font-size: 12px; /* Adjust the font size for the content */
+    margin: 0;
+}
+
+
+
+/* Add this to your existing CSS */
+
+.color-changing-title {
+    font-size: 36px; /* Adjust the font size for the title */
+    font-family: "Arial", sans-serif; /* Change the font-family */
+   /* animation: changeColor 4s infinite;  Add color-changing animation */
+    text-shadow: 2px 2px 5px rgba(0, 0, 255, 0.5); /* Add blue shadow with blur */
+}
+
+@keyframes changeColor {
+    0% { color: red; } /* Start with red color */
+    50% { color: blue; } /* Change to blue at 50% of animation */
+    100% { color: red; } /* Return to red at the end of animation */
+}
+
+
+/* Add this to your existing CSS */
+
+.project-container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.2); /* Slight blur background */
+    padding: 70px; /* Increase the padding for a larger container */
+    border-radius: 20px;
+  box-shadow:  -26px -26px 36px #e186ea,
+   26px 26px 36px #c18686; /* Glowing effect */
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line if necessary */
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Add this to your existing CSS */
+
+/* Adjust positioning for left and right titles */
+.about-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Adjust the width as needed */
+}
+
+.about-left,
+.about-right {
+    width: 45%; /* Adjust the width for left and right titles */
+}
+
+.about-title-left,
+.about-title-right {
+    text-align: center;
+    font-size: 24px;
+}
+
+.about-description-left,
+.about-description-right {
+    text-align: center;
+}
+
+/* Add this to your existing CSS */
+
+.about-title-left {
+    animation: slideInLeft 2s;
+  padding-top: 210px;
+}
+
+.about-title-right {
+    animation: slideInRight 2s;
+  padding-top: 210px;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.about-description-left.animated,
+.about-description-right.animated {
+    animation: slideIn 2s;
+    animation-fill-mode: forwards;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    padding-top: 210px; /* Add padding to push the descriptions down */
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Decrease the font size for the titles */
+.about-title-left {
+    text-align: left; /* Align the left title to the left */
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #FF5733; /* Change to your desired title color */
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5); /* Add a red glowing effect to the left title */
+}
+
+.about-title-right {
+    text-align: right; /* Align the right title to the right */
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #FF5733; /* Change to your desired title color */
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5); /* Add a red glowing effect to the right title */
+}
+
+/* Decrease the font size for the descriptions */
+.about-description-left {
+    text-align: left; /* Align the left description to the left */
+    font-size: 14px; /* Adjust the font size as needed */
+    color: #3366FF; /* Change to your desired description color */
+}
+
+.about-description-right {
+    text-align: right; /* Align the right description to the right */
+    font-size: 14px; /* Adjust the font size as needed */
+    color: #3366FF; /* Change to your desired description color */
+}
+
+.about-title-left.animated,
+.about-title-right.animated {
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5); /* Add the same red glowing effect to the animated titles */
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+nav li a:hover {
+    transition: transform 0.3s;
+    transform: translateY(-5px);
+}
+
+nav li a::before,
+nav li a::after {
+    content: attr(data-text);
+    display: block;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s, transform 0.3s;
+}
+
+nav li a::before {
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+}
+
+nav li a::after {
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%);
+}
+
+nav li a:hover::before,
+nav li a:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === removing default button style ===*/
+#dev-button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  margin-top: 10px; /* Add margin-top to adjust the position */
+}
+
+/* button styling */
+#dev-button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(201, 187, 187, 0.6);
+  --animation-color: #be5cff;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* this is the text, when you hover on the button */
+#dev-button .hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* hover */
+#dev-button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+
+
+/* Center the social card on the page */
+.socialcard {
+  position: absolute;
+  top: 140%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  /* Add any other styles you need for the card */
+  width: 200px;
+  height: 200px;
+  background: lightgrey;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 1s ease-in-out;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+
+.socialcard .background {
+  position: absolute;
+  inset: 0;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.socialcard .logo {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  transition: all 0.6s ease-in-out;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 3px;
+}
+
+.socialcard .logo .logo-svg {
+  fill: white;
+  width: 30px;
+  height: 30px;
+}
+
+.socialcard .icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.socialcard .icon .svg {
+  fill: rgba(255, 255, 255, 0.797);
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.socialcard .box {
+  position: absolute;
+  padding: 10px;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.389);
+  border-top: 2px solid rgb(255, 255, 255);
+  border-right: 1px solid white;
+  border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
+  box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
+  transform-origin: bottom left;
+  transition: all 1s ease-in-out;
+}
+
+.socialcard .box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.socialcard .box:hover .svg {
+  fill: white;
+}
+
+.socialcard .box1 {
+  width: 70%;
+  height: 70%;
+  bottom: -70%;
+  left: -70%;
+}
+
+.socialcard .box1::before {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ff53d4 60%, #62c2fe 90%);
+}
+
+.socialcard .box1:hover::before {
+  opacity: 1;
+}
+
+.socialcard .box1:hover .icon .svg {
+    filter: drop-shadow(0 0 5px white);
+  }
+
+  .socialcard .box2 {
+    width: 50%;
+    height: 50%;
+    bottom: -50%;
+    left: -50%;
+    transition-delay: 0.2s;
+  }
+
+  .socialcard .box2::before {
+    background: radial-gradient(circle at 30% 107%, #91e9ff 0%, #00ACEE 90%);
+  }
+
+  .socialcard .box2:hover::before {
+    opacity: 1;
+  }
+
+  .socialcard .box2:hover .icon .svg {
+    filter: drop-shadow(0 0 5px white);
+  }
+
+  .socialcard .box3 {
+    width: 30%;
+    height: 30%;
+    bottom: -30%;
+    left: -30%;
+    transition-delay: 0.4s;
+  }
+
+  .socialcard .box3::before {
+    background: radial-gradient(circle at 30% 107%, #969fff 0%, #b349ff 90%);
+  }
+
+  .socialcard .box3:hover::before {
+    opacity: 1;
+  }
+
+  .socialcard .box3:hover .icon .svg {
+    filter: drop-shadow(0 0 5px white);
+  }
+
+  .socialcard .box4 {
+    width: 10%;
+    height: 10%;
+    bottom: -10%;
+    left: -10%;
+    transition-delay: 0.6s;
+  }
+
+  .socialcard:hover {
+    transform: scale(1.1);
+  }
+
+  .socialcard:hover .box {
+    bottom: -1px;
+    left: -1px;
+  }
+
+  .socialcard:hover .logo {
+    transform: translate(70px, -52px);
+    letter-spacing: 0px;
+  }
+
+
+
+
+
+#education {
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-animated-text {
+    position: absolute;
+    right: -100%; /* Initially position the text outside the container to the right */
+    top: 50%; /* Vertically centered */
+    transform: translateY(-50%) scale(0.8); /* Start smaller and centered */
+    animation: scrollText 2s ease-in-out forwards;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    font-size: 50px; /* Increase text size */
+    text-align: left;
+    box-shadow:  25px 25px 17px #ef7cfe,
+   -25px -25px 17px #5e82de;
+}
+
+@keyframes scrollText {
+    0% {
+        right: -20%; /* Start off-screen to the right */
+        transform: translateY(-50%) scale(0.8);
+    }
+    100% {
+        right: 0; /* Move to the left within the container */
+        transform: translateY(-50%) scale(1); /* Enlarge text */
+    }
+}
+
+
+
+.download-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.download-button {
+    position: absolute;
+    top: 490%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+
+.download-button .docs {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 10px;
+ min-height: 40px;
+ padding: 0 10px;
+ border-radius: 4px;
+ z-index: 1;
+ background-color: #242a35;
+ border: solid 1px #e8e8e82d;
+ transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button:hover {
+ box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.download {
+ position: absolute;
+ inset: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ max-width: 90%;
+ margin: 0 auto;
+ z-index: -1;
+ border-radius: 4px;
+ transform: translateY(0%);
+ background-color: #01e056;
+ border: solid 1px #01e0572d;
+ transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button:hover .download {
+ transform: translateY(100%)
+}
+
+.download svg polyline,.download svg line {
+ animation: docs 1s infinite;
+}
+
+@keyframes docs {
+ 0% {
+  transform: translateY(0%);
+ }
+
+ 50% {
+  transform: translateY(-15%);
+ }
+
+ 100% {
+  transform: translateY(0%);
+ }
+}
+
+
+
+
+
+
+
+
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.skills-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: wheat;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow:  2px 2px 11px #8d8d8d,
+               -2px -2px 11px #ffffff;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 500px; /* Adjust the gap as needed */
+}
+
+.skill {
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.left-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.right-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+.left-skills .skill {
+    animation: slideFromLeft 1s forwards;
+}
+
+.right-skills .skill {
+    animation: slideFromRight 1s forwards;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Add this CSS for the skill cards */
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+    position: relative;
+    width: 18rem;
+    height: 8rem;
+    background: #29292c;
+    border-radius: 1rem;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
+    --color: #32a6ff;
+    padding: 1rem;
+    margin: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.skill-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill-title {
+    color: #32a6ff;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-description {
+    color: #99999d;
+    font-size: 0.9rem;
+}
+
+
+
+.skill-card:after {
+  position: absolute;
+  content: "";
+  width: 0.25rem;
+  inset: 0.65rem auto 0.65rem 0.5rem;
+  border-radius: 0.125rem;
+  background: var(--gradient);
+  transition: transform 300ms ease;
+  z-index: 4;
+}
+
+/* The rest of your existing CSS for the video container and overlay remains unchanged */
+
+.download-text {
+  margin-bottom: 50px; /* Adjust the value as needed */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+}
+
+.social-icon[href*="discord"]:hover {
+    filter: drop-shadow(0 0 5px #7289da); /* Light Blur */
+}
+
+.social-icon[href*="facebook"]:hover {
+    filter: drop-shadow(0 0 5px #1877f2); /* Dark Blue */
+}
+
+.social-icon[href*="github"]:hover {
+    filter: drop-shadow(0 0 5px #000000); /* Black */
+}
+
+.social-icon[href*="instagram"]:hover {
+    filter: drop-shadow(0 0 5px #e4405f); /* Pink/Purple */
+}
+
+.social-icon[href*="twitter"]:hover {
+    filter: drop-shadow(0 0 5px #1da1f2); /* Blue */
+}
